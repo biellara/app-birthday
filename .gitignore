@@ -1,0 +1,50 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependências
+node_modules/
+vendor/
+
+# Build / dist
+dist/
+build/
+out/
+.tmp/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test coverage
+coverage/
+
+# Pacotes
+*.tgz
+
+# Python (se tiver algo)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# Outros
+*.bak
+*.tmp
