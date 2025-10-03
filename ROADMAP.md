@@ -18,19 +18,19 @@ A ideia é guiar o projeto de ponta a ponta, organizando todas as fases necessá
 
 ## 🔹 Fase 2 — Configuração do Ambiente
 
-- [ ] Configurar Flutter SDK e criar projeto
-- [ ] Criar projeto no Firebase e conectar ao app
-- [ ] Adicionar dependências principais no `pubspec.yaml`
-- [ ] Configurar Firebase Core (Android/iOS)
-- [ ] Configurar Firebase Firestore, Storage e Auth
-- [ ] Testar build inicial ("Hello World")
+- [x] Configurar Flutter SDK e criar projeto
+- [x] Criar projeto no Firebase e conectar ao app
+- [x] Adicionar dependências principais no `pubspec.yaml`
+- [x] Configurar Firebase Core (Android/iOS)
+- [x] Configurar Firebase Firestore, Storage e Auth
+- [x] Testar build inicial ("Hello World")
 
 ---
 
 ## 🔹 Fase 3 — Autenticação e Acesso ao Evento
 
-- [ ] Implementar **Auth anônima** (MVP)
-- [ ] Criar fluxo de login com **código do evento**
+- [x] Implementar **Auth anônima** (MVP)
+- [x] Criar fluxo de login com **código do evento**
 - [ ] Salvar ID do usuário vinculado ao evento
 - [ ] Criar regras de segurança no Firestore e Storage
 
