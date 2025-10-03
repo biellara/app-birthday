@@ -1,52 +1,91 @@
-# Arquivos de sistema
-.DS_Store
-Thumbs.db
+# Arquivos de metadados do Dart e Flutter.
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
 
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Dependências
-node_modules/
-vendor/
-
-# Build / dist
-dist/
+# Arquivos gerados pelo processo de build.
 build/
-out/
-.tmp/
+app_birthday.iml
 
-# Ambiente
-.env
-.env.local
-.env.*.local
+# Arquivos de lock de dependências.
+# É uma boa prática versionar o pubspec.lock para garantir que todos os
+# desenvolvedores usem as mesmas versões de pacotes.
+# No entanto, se preferir não versioná-lo, descomente a linha abaixo.
+# pubspec.lock
 
-# Cache
-.cache/
-.parcel-cache/
-.next/
-.nuxt/
+# Arquivos de configuração do Firebase gerados localmente.
+# O arquivo firebase.json gerado pela CLI do FlutterFire DEVE ser versionado.
+# A linha abaixo é para outros possíveis arquivos de configuração que não devem ir para o repositório.
+# firebase_options.dart # Geralmente é seguro versionar, mas pode ser ignorado se gerado dinamicamente.
+
+# Arquivos sensíveis que NUNCA devem ser versionados.
+# Exemplo: Chaves de API, senhas, etc.
+*.env
+/android/key.properties
+/android/local.properties
+/ios/Flutter/Generated.xcconfig
+/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
+
+# Arquivos de log.
+*.log
+logs/
+
+# Arquivos específicos de editores de código e IDEs.
+
+# VS Code
 .vscode/
+launch.json
+settings.json
+extensions.json
+
+# Android Studio e IntelliJ
 .idea/
-*.swp
-*.swo
+*.iml
+*.ipr
+*.iws
+.metadata
+app_birthday_android.iml
 
-# Test coverage
-coverage/
+# Configurações específicas de plataformas que já são ignoradas pelos .gitignore internos.
+# Apenas para garantir.
+/android/.gradle/
+/android/app/build/
+/android/build/
 
-# Pacotes
-*.tgz
+/ios/Pods/
+/ios/build/
+/ios/.symlinks/
+/ios/Flutter/App.framework
+/ios/Flutter/engine.xcconfig
+/ios/Flutter/pod_runner.xcconfig
+/ios/Flutter/Flutter.podspec
+/ios/Runner/GeneratedPluginRegistrant.*
 
-# Python (se tiver algo)
-__pycache__/
-*.py[cod]
-*.egg-info/
-.venv/
+/macos/build/
+/macos/Flutter/ephemeral/
+/macos/Pods/
+/macos/.symlinks/
 
-# Outros
-*.bak
-*.tmp
+/linux/build/
+/linux/ephemeral/
 
-.dart_tool
+/windows/build/
+/windows/runner/Debug/
+/windows/runner/Profile/
+/windows/runner/Release/
+/windows/ephemeral/
+/windows/flutter/ephemeral/
+
+# Arquivos do sistema operacional.
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
