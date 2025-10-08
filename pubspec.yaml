@@ -15,8 +15,8 @@ dependencies:
   firebase_auth: ^6.1.0 # Para autenticação
   cloud_firestore: ^6.0.2 # Banco de dados em tempo real
   firebase_storage: ^13.0.2 # Para armazenamento de fotos
-  # Outras dependências úteis
   image_picker: ^1.2.0 # Para selecionar fotos da galeria/câmera
+  flutter_staggered_animations: ^1.1.1 # Para animações
 
   cupertino_icons: ^1.0.8
 

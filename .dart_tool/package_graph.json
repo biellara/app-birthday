@@ -13,6 +13,7 @@
         "firebase_core",
         "firebase_storage",
         "flutter",
+        "flutter_staggered_animations",
         "image_picker"
       ],
       "devDependencies": [
@@ -49,6 +50,13 @@
       "name": "cupertino_icons",
       "version": "1.0.8",
       "dependencies": []
+    },
+    {
+      "name": "flutter_staggered_animations",
+      "version": "1.1.1",
+      "dependencies": [
+        "flutter"
+      ]
     },
     {
       "name": "image_picker",
