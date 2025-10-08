@@ -29,19 +29,19 @@ Este documento descreve o roadmap completo para o desenvolvimento do aplicativo 
 ## 🔹 Fase 3 — Lógica Central e Acesso
 
 - [x] Implementar **Auth anônima** no `AuthService` para ser reutilizada por ambos os clientes
-- [ ] Criar regras de segurança no Firestore e Storage para permitir upload apenas de usuários autenticados
+- [x] Criar regras de segurança no Firestore e Storage para permitir upload apenas de usuários autenticados
 
 ---
 
 ## 🔹 Fase 4 — Portal do Convidado (Flutter Web)
 
-- [ ] Habilitar o Flutter Web no projeto e criar a estrutura de páginas/rotas
-- [ ] Desenvolver a UI da página de upload: simples, com instruções claras
-- [ ] Implementar a lógica de seleção de fotos da câmera ou galeria (usando `image_picker_for_web`)
-- [ ] Implementar a função de upload para o **Firebase Storage**
-- [ ] Após o upload, registrar as informações da foto no **Firestore** (`imageUrl`, `userId`, `timestamp`)
-- [ ] Adicionar feedback visual claro (indicador de progresso, mensagem de sucesso/erro)
-- [ ] Garantir que o design seja responsivo e funcione bem em qualquer navegador de celular
+- [x] Habilitar o Flutter Web no projeto e criar a estrutura de páginas/rotas
+- [x] Desenvolver a UI da página de upload: simples, com instruções claras
+- [x] Implementar a lógica de seleção de fotos da câmera ou galeria (usando `image_picker_for_web`)
+- [x] Implementar a função de upload para o **Firebase Storage**
+- [x] Após o upload, registrar as informações da foto no **Firestore** (`imageUrl`, `userId`, `timestamp`)
+- [x] Adicionar feedback visual claro (indicador de progresso, mensagem de sucesso/erro)
+- [x] Garantir que o design seja responsivo e funcione bem em qualquer navegador de celular
 
 ---
 

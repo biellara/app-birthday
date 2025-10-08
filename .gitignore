@@ -4,42 +4,30 @@
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
-.pub/
 
 # Arquivos gerados pelo processo de build.
 build/
-app_birthday.iml
 
 # Arquivos de lock de dependências.
-# É uma boa prática versionar o pubspec.lock para garantir que todos os
-# desenvolvedores usem as mesmas versões de pacotes.
-# No entanto, se preferir não versioná-lo, descomente a linha abaixo.
-# pubspec.lock
+# O pubspec.lock DEVE ser versionado para garantir builds consistentes.
 
 # Arquivos de configuração do Firebase gerados localmente.
-# O arquivo firebase.json gerado pela CLI do FlutterFire DEVE ser versionado.
-# A linha abaixo é para outros possíveis arquivos de configuração que não devem ir para o repositório.
-# firebase_options.dart # Geralmente é seguro versionar, mas pode ser ignorado se gerado dinamicamente.
+# O firebase.json gerado pela CLI do FlutterFire DEVE ser versionado.
+# O google-services.json geralmente é versionado em projetos solo para facilitar a clonagem,
+# mas em projetos de equipe/open-source, deve ser adicionado aqui.
 
 # Arquivos sensíveis que NUNCA devem ser versionados.
-# Exemplo: Chaves de API, senhas, etc.
 *.env
 /android/key.properties
 /android/local.properties
-/ios/Flutter/Generated.xcconfig
-/macos/Flutter/ephemeral/Flutter-Generated.xcconfig
 
 # Arquivos de log.
 *.log
 logs/
 
 # Arquivos específicos de editores de código e IDEs.
-
 # VS Code
 .vscode/
-launch.json
-settings.json
-extensions.json
 
 # Android Studio e IntelliJ
 .idea/
@@ -47,10 +35,9 @@ extensions.json
 *.ipr
 *.iws
 .metadata
-app_birthday_android.iml
+*_android.iml
 
-# Configurações específicas de plataformas que já são ignoradas pelos .gitignore internos.
-# Apenas para garantir.
+# Arquivos gerados por plataformas específicas que não devem ser versionados.
 /android/.gradle/
 /android/app/build/
 /android/build/
@@ -70,22 +57,5 @@ app_birthday_android.iml
 /macos/.symlinks/
 
 /linux/build/
-/linux/ephemeral/
 
 /windows/build/
-/windows/runner/Debug/
-/windows/runner/Profile/
-/windows/runner/Release/
-/windows/ephemeral/
-/windows/flutter/ephemeral/
-
-# Arquivos do sistema operacional.
-# Mac
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
-Thumbs.db
-ehthumbs.db
-[Dd]esktop.ini

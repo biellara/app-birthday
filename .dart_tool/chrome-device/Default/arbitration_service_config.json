@@ -12,7 +12,7 @@
       }
    },
    "DynamicSuppressionBypass": {
-      "ExperienceIDs": [ "Nurturing.Global.OnRamp_RetriggerFREOnEdgeVersionUpgradeViaExplicitLaunch", "Nurturing.Global.OnRamp_RetriggerFREOnExplicitProtocolPDFLaunchForEdgePostDMA", "Nurturing.Global.Bing_DefaultBrowserBannerCloseBtn", "Nurturing.Global.Bing_DefaultBrowserBannerCloseBtnUpdate", "Nurturing.Global.Bing_MSStartYJCompete", "Nurturing.Global.Bing_NtpHomeStartpageUpsellFlyout", "Nurturing.Global.Bing_RecommendedSettingsExplicitLaunch", "Nurturing.Global.Bing_RecommendedSettingsWsbDialog", "Nurturing.Global.Fundamentals_DefaultBrowserMonitor", "Nurturing.Global.Fundamentals_DefaultBrowserMonitorOnStart", "Nurturing.Global.Fundamentals_DefaultBrowserMonitorVariant2", "Nurturing.Global.RecommendedSettingsChina", "Nurturing.Global.ContinuousImport_PasswordZeroStateV2", "Nurturing.Global.OnRamp_CIExplicitLaunchBannerUpsell", "Nurturing.Global.OnRamp_CIUpsell_ProtocolLaunch_Banner", "Nurturing.Global.EdgeGrowth_SitePinningCITopSites", "Nurturing.Global.EdgeGrowth_SitePinningWithWindowsConsent", "Nurturing.Global.EdgeGrowth_GlobalSitePinningOnCloseModal" ],
+      "ExperienceIDs": [ "Nurturing.Global.OnRamp_RetriggerFREOnEdgeVersionUpgradeViaExplicitLaunch", "Nurturing.Global.OnRamp_RetriggerFREOnExplicitProtocolPDFLaunchForEdgePostDMA", "Nurturing.Global.Bing_DefaultBrowserBannerCloseBtn", "Nurturing.Global.Bing_DefaultBrowserBannerCloseBtnUpdate", "Nurturing.Global.Bing_MSStartYJCompete", "Nurturing.Global.Bing_NtpHomeStartpageUpsellFlyout", "Nurturing.Global.Fundamentals_DefaultBrowserMonitor", "Nurturing.Global.Fundamentals_DefaultBrowserMonitorOnStart", "Nurturing.Global.Fundamentals_DefaultBrowserMonitorVariant2", "Nurturing.Global.RecommendedSettingsChina", "Nurturing.Global.ContinuousImport_PasswordZeroStateV2", "Nurturing.Global.OnRamp_CIExplicitLaunchBannerUpsell", "Nurturing.Global.OnRamp_CIUpsell_ProtocolLaunch_Banner", "Nurturing.Global.EdgeGrowth_SitePinningCITopSites", "Nurturing.Global.EdgeGrowth_SitePinningWithWindowsConsent", "Nurturing.Global.EdgeGrowth_GlobalSitePinningOnCloseModal" ],
       "TeamIDs": [ "NTP" ]
    },
    "ExperienceCohorts": {
@@ -188,6 +188,6 @@
    },
    "SuppressedExperiences": [  ],
    "TimeDelta": 5000000,
-   "baseConfigVersion": "31.0.2",
-   "configVersion": "31.0.2"
+   "baseConfigVersion": "32.0.3",
+   "configVersion": "32.0.3"
 }

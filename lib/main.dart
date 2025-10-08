@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
+// lib/main.dart
+import 'package:app_birthday/firebase_options.dart';
+import 'package:app_birthday/screens/login_screen.dart';
+import 'package:app_birthday/screens/upload_screen.dart'; // Importe a nova tela
 import 'package:firebase_core/firebase_core.dart';
-import 'auth/auth_service.dart';
-import 'firebase_options.dart';
-import 'screens/home_screen.dart';
-import 'screens/login_screen.dart';
+import 'package:flutter/foundation.dart'; // Importe para usar o kIsWeb
+import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,15 +17,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final authService = AuthService();
-
     return MaterialApp(
       title: 'App Birthday',
-      theme: ThemeData(primarySwatch: Colors.pink, brightness: Brightness.dark),
-      // Decide qual tela mostrar com base no status do login
-      home: authService.currentUser == null
-          ? const LoginScreen()
-          : const HomeScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      // Se for web, mostra a tela de Upload, senão, mostra a de Login.
+      home: kIsWeb ? const UploadScreen() : const LoginScreen(),
     );
   }
 }
