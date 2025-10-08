@@ -1,115 +1,91 @@
-# 📍 Roadmap do Projeto - App de Aniversário (Flutter + Firebase)
+# 📍 Roadmap do Projeto - App de Aniversário (Arquitetura Híbrida)
 
-Este documento descreve o **roadmap completo** para o desenvolvimento do aplicativo de registro de fotos em tempo real do aniversário.  
-A ideia é guiar o projeto de ponta a ponta, organizando todas as fases necessárias.
+Este documento descreve o roadmap completo para o desenvolvimento do aplicativo de registro de fotos, utilizando uma abordagem híbrida: **um portal web para os convidados** e **um app nativo para a aniversariante**.
 
 ---
 
 ## 🔹 Fase 1 — Concepção & Planejamento
 
 - [x] Definir nome, cores e ícone do app
-- [x] Criar wireframes/mockups (Figma)
-- [x] Escolher fluxo de autenticação (Auth anônima, código do evento ou QR code)
+- [x] Criar wireframes/mockups (Figma) para ambas as plataformas (Web e App)
+- [x] Escolher fluxo de autenticação (Auth anônima para simplicidade)
 - [x] Especificar estrutura de dados no Firebase (Firestore + Storage)
 - [x] Criar repositório no GitHub/GitLab
-- [x] Preparar backlog de features (Kanban/Jira/Trello)
+- [x] Preparar backlog de features
 
 ---
 
 ## 🔹 Fase 2 — Configuração do Ambiente
 
 - [x] Configurar Flutter SDK e criar projeto
-- [x] Criar projeto no Firebase e conectar ao app
+- [x] Criar projeto no Firebase e conectar ao app (Android/iOS/Web)
 - [x] Adicionar dependências principais no `pubspec.yaml`
-- [x] Configurar Firebase Core (Android/iOS)
-- [x] Configurar Firebase Firestore, Storage e Auth
-- [x] Testar build inicial ("Hello World")
+- [x] Configurar Firebase Core, Firestore, Storage e Auth
+- [x] Habilitar e configurar o **Firebase Hosting** para o portal web
+- [x] Testar build inicial ("Hello World") em todas as plataformas
 
 ---
 
-## 🔹 Fase 3 — Autenticação e Acesso ao Evento
+## 🔹 Fase 3 — Lógica Central e Acesso
 
-- [x] Implementar **Auth anônima** (MVP)
-- [x] Criar fluxo de login com **código do evento**
-- [ ] Salvar ID do usuário vinculado ao evento
-- [ ] Criar regras de segurança no Firestore e Storage
+- [x] Implementar **Auth anônima** no `AuthService` para ser reutilizada por ambos os clientes
+- [ ] Criar regras de segurança no Firestore e Storage para permitir upload apenas de usuários autenticados
 
 ---
 
-## 🔹 Fase 4 — Upload de Fotos
+## 🔹 Fase 4 — Portal do Convidado (Flutter Web)
 
-- [ ] Implementar seleção de fotos (câmera/galeria)
-- [ ] Adicionar compressão antes do upload
-- [ ] Upload para **Firebase Storage**
-- [ ] Registrar foto no Firestore (`url`, `userId`, `timestamp`)
-- [ ] Tela de confirmação após upload
-
----
-
-## 🔹 Fase 5 — Feed em Tempo Real
-
-- [ ] Criar tela de feed (grid ou lista)
-- [ ] Implementar listener do Firestore (`snapshots`)
-- [ ] Exibir novas fotos em tempo real
-- [ ] Exibir nome/emoji do usuário (se configurado)
-- [ ] Testar feed em múltiplos dispositivos simultâneos
+- [ ] Habilitar o Flutter Web no projeto e criar a estrutura de páginas/rotas
+- [ ] Desenvolver a UI da página de upload: simples, com instruções claras
+- [ ] Implementar a lógica de seleção de fotos da câmera ou galeria (usando `image_picker_for_web`)
+- [ ] Implementar a função de upload para o **Firebase Storage**
+- [ ] Após o upload, registrar as informações da foto no **Firestore** (`imageUrl`, `userId`, `timestamp`)
+- [ ] Adicionar feedback visual claro (indicador de progresso, mensagem de sucesso/erro)
+- [ ] Garantir que o design seja responsivo e funcione bem em qualquer navegador de celular
 
 ---
 
-## 🔹 Fase 6 — Experiência do Usuário (UX/UI)
+## 🔹 Fase 5 — App da Aniversariante (App Nativo)
 
-- [ ] Criar tema visual (cores, fontes)
-- [ ] Implementar **cards de fotos** com animações
-- [ ] Adicionar botão flutuante de upload
-- [ ] Tela inicial personalizada (nome da aniversariante)
-- [ ] Feedback visual (loading, erros, sucesso)
+- [ ] Estruturar a tela principal do feed (Ex: `home_screen.dart`)
+- [ ] Implementar o listener do Firestore (`snapshots`) para ouvir a coleção de fotos
+- [ ] Desenvolver a UI para exibir as fotos (Grid, Lista, Cards)
+- [ ] Garantir que novas fotos apareçam em **tempo real** sem a necessidade de atualizar a tela
+- [ ] Implementar um tema visual coeso (cores, fontes, ícones)
+- [ ] Adicionar animações sutis na entrada de novas fotos para uma experiência mais "mágica"
+
+---
+
+## 🔹 Fase 6 — Testes e Refinamento
+
+- [ ] Testar o fluxo completo: fazer upload pelo site e verificar se aparece instantaneamente no app
+- [ ] Testar em múltiplos dispositivos e navegadores diferentes
+- [ ] Otimizar o tamanho das imagens antes do upload para economizar dados e agilizar o envio
+- [ ] Revisar as regras de segurança do Firebase
 
 ---
 
 ## 🔹 Fase 7 — Extras (Opcional)
 
-- [ ] Reações nas fotos (❤️, 🎉, 😍)
-- [ ] Comentários curtos
-- [ ] Notificações push (Firebase Messaging)
-- [ ] Tela de “Melhores momentos” (ranking de fotos mais curtidas)
+- [ ] Reações nas fotos (❤️, 🎉, 😍) no app da aniversariante
+- [ ] Exibir o feed de fotos em uma TV no evento (usando a versão web do feed)
+- [ ] Notificações push (Firebase Messaging) no app da aniversariante para avisar sobre novas fotos
 
 ---
 
-## 🔹 Fase 8 — Pós-Evento
+## 🔹 Fase 8 — Publicação & Distribuição
 
-- [ ] Criar botão para baixar todas as fotos (ZIP)
-- [ ] Gerar galeria web simples (Firebase Hosting)
-- [ ] Criar slideshow automático (opcional)
-
----
-
-## 🔹 Fase 9 — Publicação & Distribuição
-
-- [ ] Configurar assinatura do app (keystore/certificados)
-- [ ] Publicar no **Google Play** (modo não listado)
-- [ ] Publicar no **App Store TestFlight**
-- [ ] Gerar QR code/link para convidados
-- [ ] Testar em dispositivos dos convidados
-
----
-
-## 🔹 Fase 10 — Entrega Final
-
-- [ ] Testar app com carga real (vários convidados enviando fotos)
-- [ ] Revisar segurança e privacidade
-- [ ] Apresentar o app para a aniversariante como presente
-- [ ] Suporte no dia do evento
+- [ ] Fazer o deploy do portal de upload no **Firebase Hosting**
+- [ ] Gerar um QR Code e um link curto para o site e colocar no convite do evento
+- [ ] Configurar assinatura do app nativo (keystore/certificados)
+- [ ] Publicar o app da aniversariante no **Google Play** (modo não listado) e/ou **App Store TestFlight**
 
 ---
 
 ## 🎯 Ordem Recomendada de Desenvolvimento
 
-1. Configuração (Fase 1-2)
-2. Login e acesso ao evento (Fase 3)
-3. Upload de fotos (Fase 4)
-4. Feed em tempo real (Fase 5)
-5. UX/UI (Fase 6)
-6. Extras (Fase 7)
-7. Pós-evento (Fase 8)
-8. Publicação (Fase 9)
-9. Entrega final (Fase 10)
+1.  **Configuração e Lógica Central (Fases 1, 2, 3):** Deixar todo o backend e a base do projeto prontos.
+2.  **Portal do Convidado (Fase 4):** Focar em ter a porta de entrada das fotos 100% funcional. É a parte mais crítica para o sucesso do evento.
+3.  **App da Aniversariante (Fase 5):** Com as fotos já podendo ser enviadas, desenvolver a interface que irá consumi-las.
+4.  **Testes e Refinamento (Fase 6):** Conectar as duas pontas e garantir que tudo funciona perfeitamente.
+5.  **Publicação e Extras (Fases 7 e 8):** Finalizar o projeto para a entrega.

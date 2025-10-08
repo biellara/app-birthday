@@ -1,24 +1,29 @@
-# 🎂 app-birthday
+# App Birthday 🎂✨
 
-App para registro de fotos em tempo real do aniversário.
+Um projeto especial para registrar e compartilhar em tempo real as memórias de uma festa de aniversário.
 
-## 📍 O que é o App?
+## Sobre o Projeto
 
-O "app-birthday" é um aplicativo mobile desenvolvido para registrar e compartilhar fotos de um evento de aniversário em tempo real. A ideia é que os convidados possam tirar fotos durante a festa e vê-las instantaneamente em um feed compartilhado, criando um mural de memórias colaborativo e em tempo real.
+Este é um sistema de compartilhamento de fotos em tempo real desenvolvido para eventos. A solução foi pensada para maximizar a participação dos convidados e, ao mesmo tempo, oferecer uma experiência única e emocionante para a aniversariante.
 
-## ✨ Funcionalidades Principais
+A arquitetura é **híbrida**, combinando o melhor de duas plataformas:
 
-- **Autenticação Simples:** Acesso ao evento via código exclusivo ou QR code para os convidados.
-- **Upload de Fotos:** Os usuários podem selecionar fotos da galeria do celular ou usar a câmera para tirar fotos diretamente no app e fazer o upload.
-- **Feed em Tempo Real:** As fotos enviadas aparecem instantaneamente para todos os convidados em um feed em tempo real, permitindo que todos acompanhem os momentos da festa juntos.
-- **Design Personalizado:** A experiência do usuário é aprimorada com um design visualmente atraente, incluindo telas personalizadas para o nome da aniversariante e cards de fotos animados.
-- **Recursos Pós-Evento:** Após a festa, os usuários terão a opção de baixar todas as fotos em um arquivo ZIP ou acessar uma galeria web simples com os melhores momentos.
+1.  **Portal Web para Convidados**: Uma interface web super simples e leve, acessível através de um QR Code ou link. Os convidados podem enviar fotos diretamente do celular, sem precisar instalar nenhum aplicativo, removendo qualquer barreira de uso.
+2.  **Aplicativo Nativo para a Aniversariante**: Um aplicativo Flutter exclusivo para a aniversariante, onde ela pode visualizar um feed de fotos que é atualizado instantaneamente a cada novo envio dos convidados. A experiência é fluida, imersiva e cheia de animações.
 
-## 🛠️ Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
-- **Flutter:** Framework principal para o desenvolvimento do aplicativo mobile.
-- **Firebase:** Utilizado para gerenciar a autenticação (`Auth`), armazenar as fotos (`Storage`) e garantir o feed em tempo real (`Firestore`).
+* **Frontend**: Flutter (para o App Nativo e para o Portal Web)
+* **Backend**: Firebase (BaaS - Backend as a Service)
+    * **Firebase Authentication**: Para login anônimo e seguro de cada convidado.
+    * **Cloud Firestore**: Como banco de dados NoSQL para registrar as informações de cada foto em tempo real.
+    * **Firebase Storage**: Para armazenar os arquivos de imagem de forma segura e escalável.
+    * **Firebase Hosting**: Para hospedar o portal web dos convidados, com CDN global e SSL gratuito.
 
-## ✅ Como Acessar o App
+## Funcionalidades Planejadas
 
-O aplicativo será disponibilizado para os convidados através de um link ou QR code, com publicação no **Google Play** e no **App Store TestFlight**.
+* [✅] Autenticação anônima para convidados.
+* [ ] Upload de fotos simplificado via interface web.
+* [ ] Galeria de fotos em tempo real no aplicativo da aniversariante.
+* [ ] Feedback visual de carregamento e sucesso no upload.
+* [ ] Design responsivo no portal web para funcionar em qualquer celular.
