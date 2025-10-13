@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Mural de Fotos do Evento')),
+      appBar: AppBar(title: const Text('Meu Mural')), // Título mais pessoal
       body: StreamBuilder<QuerySnapshot>(
         stream: _databaseService.getPhotosStream(),
         builder: (context, snapshot) {

@@ -1,6 +1,7 @@
 // lib/screens/login_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../auth/auth_service.dart';
 import 'home_screen.dart';
 
@@ -8,7 +9,6 @@ class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
   @override
-  // Correção: Renomeado de _LoginScreenState para LoginScreenState
   LoginScreenState createState() => LoginScreenState();
 }
 
@@ -37,8 +37,6 @@ class LoginScreenState extends State<LoginScreen> {
       _passwordController.text,
     );
 
-    // --- CORREÇÃO AQUI ---
-    // Verifica se o widget ainda está na árvore de widgets antes de usar o context
     if (!mounted) return;
 
     setState(() {
@@ -46,12 +44,10 @@ class LoginScreenState extends State<LoginScreen> {
     });
 
     if (user != null) {
-      // A navegação agora é segura
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     } else {
-      // O uso do ScaffoldMessenger agora é seguro
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           content: Text('Falha no login. Verifique suas credenciais.'),
@@ -63,27 +59,37 @@ class LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Login - App da Aniversariante')),
+      appBar: AppBar(title: const Text('BirthdayK')),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              Text(
+                'Bem-vinda!',
+                style: GoogleFonts.dancingScript(
+                  fontSize: 48,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 40),
               TextField(
                 controller: _emailController,
                 decoration: const InputDecoration(labelText: 'E-mail'),
                 keyboardType: TextInputType.emailAddress,
+                style: const TextStyle(color: Colors.white),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 16),
               TextField(
                 controller: _passwordController,
                 decoration: const InputDecoration(labelText: 'Senha'),
                 obscureText: true,
+                style: const TextStyle(color: Colors.white),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
               _isLoading
-                  ? const CircularProgressIndicator()
+                  ? const CircularProgressIndicator() // Usará a cor do tema
                   : ElevatedButton(
                       onPressed: _login,
                       child: const Text('Entrar'),

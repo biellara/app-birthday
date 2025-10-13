@@ -17,6 +17,7 @@ dependencies:
   firebase_storage: ^13.0.2 # Para armazenamento de fotos
   image_picker: ^1.2.0 # Para selecionar fotos da galeria/câmera
   flutter_staggered_animations: ^1.1.1 # Para animações
+  google_fonts: ^6.3.2 # Para usar fontes do Google
 
   cupertino_icons: ^1.0.8
 
@@ -24,5 +25,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4 # Para ícones personalizados
 flutter:
   uses-material-design: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png" # Caminho para a sua imagem
+  min_sdk_android: 21 # opcional
